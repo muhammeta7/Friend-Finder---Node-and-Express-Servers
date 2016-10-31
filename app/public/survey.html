@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-user"></span> Survey</h1>
+      <hr>
+      <h2 class="text-center"></h2>
+      <br>
+      <a href="/"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-home"></span></button></a>
+    </div>
+
+    <!-- Name and photo required -->
+    <h4>Name(Required)</h4>
+    <input type='text' id='name' class='form-control' required>
+    <h4>Link to Photo Image(Required)</h4>
+    <input type='text' id='photo' class='form-control' required>
+
+    <!-- Survey Questions -->
+    <h3 class="questionNum">Question 1:</h3>
+    <p class='question'>I am a big sports fan!</p>
+    <select data-placeholder class='chosen-select' id='question1'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 2:</h3>
+    <p class='question'>I love a good beer!</p>
+    <select data-placeholder class='chosen-select' id='question2'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 3:</h3>
+    <p class='question'>I support people's freedom to practice their religions.</p>
+    <select data-placeholder class='chosen-select' id='question3'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 4:</h3>
+    <p class='question'>I enjoy traveling outside the United States.</p>
+    <select data-placeholder class='chosen-select' id='question4'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 5:</h3>
+    <p class='question'>I prefer cooking over ordering out.</p>
+    <select data-placeholder class='chosen-select' id='question5'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 6:</h3>
+    <p class='question'>I prefer to have a few close friends.</p>
+    <select data-placeholder class='chosen-select' id='question6'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 7:</h3>
+    <p class='question'>Pizza is the best!</p>
+    <select data-placeholder class='chosen-select' id='question7'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 8:</h3>
+    <p class='question'>Donald Trump is an idiot.</p>
+    <select data-placeholder class='chosen-select' id='question8'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 9:</h3>
+    <p class='question'>I could eat fries every meal and be happy.</p>
+    <select data-placeholder class='chosen-select' id='question9'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3 class="questionNum">Question 10:</h3>
+    <p class='question'>Brownies are great and all but cookies are the greatest of all time!</p>
+    <select data-placeholder class='chosen-select' id='question10'>
+      <option value='0'>Select</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    
+    <br>
+    <br>
+    <button class="btn btn-primary btn-lg btn-block" id='submit' type="submit" name="action">Submit</button>
+
+  </div>
+
+  <!-- Modal when user mathes friend -->
+  <div class='container'>
+    
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Best Matched Friend</h4>
+          </div>
+          <div class="modal-body">
+            <p><!-- Some text in the modal. --></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
+
+<script type='text/javascript'>
+  // Front-End Javascript posts form data 
+  $('#submit').on('click' , function(){
+
+    // Form validation
+    function validateForm(){
+      var isValid = true;
+      $('.form-control').each(function(){
+        if ($(this).val() === ''){
+          isValid = false;
+        }
+      });
+
+      $('.chose-select').each(function(){
+        if ($(this).val() === '') {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+
+    // All required fields are filled out
+    if (validateForm() == true){
+      var userData = {
+        name: $('#name').val().trim();
+        photo: $('#photo').val().trim();
+        scores: [
+          $('#question1').val(),
+          $('#question2').val(),
+          $('#question3').val(),
+          $('#question4').val(),
+          $('#question5').val(),
+          $('#question6').val(),
+          $('#question7').val(),
+          $('#question8').val(),
+          $('#question9').val(),
+          $('#question10').val()
+        ]
+      }
+
+      // Grab URL of website
+      var currentURL = window.location.origin;
+      // AJAX post data to friends API
+      $.post(currentURL + '/api/friends', userData, function(data){
+
+      })
+
+
+
+
+    }
+   
+
+    
+
+  })
