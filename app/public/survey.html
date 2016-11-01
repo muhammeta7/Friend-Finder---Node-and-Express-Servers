@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Survey Page</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
@@ -192,8 +191,8 @@
         // All required fields are filled out
         if (validateForm() == true){
           var userData = {
-            name: $('#name').val().trim();
-            photo: $('#photo').val().trim();
+            name: $('#name').val().trim(),
+            photo: $('#photo').val().trim(),
             scores: [
               $('#question1').val(),
               $('#question2').val(),
@@ -208,6 +207,7 @@
             ]
           }
 
+          console.log(userData);
           // Grab URL of website
           var currentURL = window.location.origin;
           // AJAX post data to friends API
@@ -224,6 +224,7 @@
         
         return false;
       })
+      
     </script>
   </body>
 </html>
