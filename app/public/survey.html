@@ -134,6 +134,28 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+
+      <div id='resultsModal' class='modal-fade' role="dialog" style='display: none;'>
+        <div class='modal-dialog'>
+          <div class='modal-content'>
+            
+            <div class='modal-header'>
+              <button type='button' class='close' data-dismiss='modal'>x</button>
+              <h2 class='modal-title'><strong>Best Match</strong></h2>
+            </div>
+
+            <div class='modal-body'>
+              <h2 id='matchName'></h2>
+              <img id='matchImg' src='' alt='No Image'>
+            </div>
+
+            <div class='modal-footer'>
+              <button type='button' class='btn btn-default' data-dismiss='modal'></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
       
       <br>
       <br>
@@ -232,9 +254,11 @@
      // 
       $.post(currentURL + '/api/friends', userData, function(data){
         // Takes user input and displays best matches name and photo
-        $('#friendName').text(data.name);
-        $('#friendImage').attr('src', data.photo);
-        $('#matchDisplay').modal('toggle');
+        console.log(data);
+        $('#matchName').text(data.name);
+        $('#matchImg').attr('src', data.photo);
+        $('#resultsModal').modal('toggle');
+        console('resultsModal');
       });
      
       // Clears value after submit
