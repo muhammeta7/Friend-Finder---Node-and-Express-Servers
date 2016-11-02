@@ -1,32 +1,19 @@
-//array that holds all the 'friends' that take the survey
-//initially started with 'dummy' data
+//array that holds all the 'friends' that take the survey (initially filled with dummy data)
 var friendList = [
   {
-    name: 'Muhammet Aydin',
+    name: 'Muhammet',
     profilePic: 'http://lorempixel.com/400/200/',
-    scores: [
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5",
-      "5"
-    ]
+    scores: ['5','5','5','5','5','5','5','5','5','5']
+  }, {
+    name: 'Rando',
+    profilePic: 'http://lorempixel.com/400/200/',
+    scores: ['3','3','3','3','3','3','3','3','3','3']
+  }, {
+    name: 'El Chapo',
+    profilePic: 'http://lorempixel.com/400/200/',
+    scores: ['1','1','1','1','1','1','1','1','1','1']
   }
 ]
 
-// function matchWithFriend() {
-
-//   for (var i=0; i < friendList.scores.length; i++){
-//     console.log(friendList);
-//   }
-
-// }
-
-// matchWithFriend();
 
 module.exports = friendList;  
