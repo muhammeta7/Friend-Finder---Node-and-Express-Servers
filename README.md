@@ -12,7 +12,7 @@ heroku link: https://polar-gorge-29734.herokuapp.com/
 ## Technologies used
 - Node.js
 - npm path (https://www.npmjs.com/package/path)
-- npm mysql (https://www.npmjs.com/package/mysql)
+- npm express (https://www.npmjs.com/package/express)
 - npm body-parser (https://www.npmjs.com/package/body-parser)
 
 ### Prerequisites
@@ -29,5 +29,5 @@ See package.json
 
 ## Authors
 
-* **Muhammet Aydin** - *JS/MySQL/Node.js* - [Muhammet Aydin](https://github.com/muhammeta7/Node.js-MySQL)
+* **Muhammet Aydin** - *JS/Express/Node.js* - [Muhammet Aydin](https://github.com/muhammeta7/Friend-Finder---Node-and-Express-Servers)
 
