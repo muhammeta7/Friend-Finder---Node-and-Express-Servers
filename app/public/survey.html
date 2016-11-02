@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Survey Page</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
@@ -164,67 +165,92 @@
       </div> 
     </div>
 
+    <div class="footer">
+          
+      <h3>Links</h3>
+      <div class="panel panel-default">
+        <div class="panel-body">
+            <p><a class="white-text text-lighten-3" href="/api/friends">API Friend List</a></p>
+            <p><a class="white-text text-lighten-3" href="https://github.com/muhammeta7/Friend-Finder---Node-and-Express-Servers">Github Repo</a></p>
+        </div>
+        <div class="panel-footer text-center">© 2016 Copyright Muhammet Aydin</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
   
 
 
-    <script type='text/javascript'>
-      // Front-End Javascript posts form data 
-      $('#submit').on('click' , function(){
+<script type='text/javascript'>
+  // Front-End Javascript posts form data 
+  $('#submit').on('click' , function(){
 
-        // Form validation
-        function validateForm(){
-          var isValid = true;
-          $('.form-control').each(function(){
-            if ($(this).val() === ''){
-              isValid = false;
-            }
-          });
-
-          $('.chose-select').each(function(){
-            if ($(this).val() === '') {
-              isValid = false;
-            }
-          });
-          return isValid;
+    // Form validation
+    function validateForm(){
+      var isValid = true;
+      $('.form-control').each(function(){
+        if ($(this).val() === ''){
+          isValid = false;
         }
+      });
 
-        // All required fields are filled out
-        if (validateForm() == true){
-          var userData = {
-            name: $('#name').val().trim(),
-            photo: $('#photo').val().trim(),
-            scores: [
-              $('#question1').val(),
-              $('#question2').val(),
-              $('#question3').val(),
-              $('#question4').val(),
-              $('#question5').val(),
-              $('#question6').val(),
-              $('#question7').val(),
-              $('#question8').val(),
-              $('#question9').val(),
-              $('#question10').val()
-            ]
-          }
+      $('.chose-select').each(function(){
+        if ($(this).val() === '') {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
 
-          console.log(userData);
-          // Grab URL of website
-          var currentURL = window.location.origin;
-          // AJAX post data to friends API
-          $.post(currentURL + '/api/friends', userData, function(data){
-            // Takes user input and displays best matches name and photo
-            $('#friendName').text(data.name);
-            $('#friendImage').attr('src', data.photo);
-            $('#matchDisplay').modal('toggle');
-          });
-        }
-        else{
-          alert('Please fill out all required fields before submitting.');
-        }
-        
-        return false;
-      })
-      
-    </script>
-  </body>
-</html>
+    // All required fields are filled out
+    if (validateForm() == true){
+      var userData = {
+        name: $('#name').val().trim(),
+        photo: $('#photo').val().trim(),
+        scores: [
+          $('#question1').val(),
+          $('#question2').val(),
+          $('#question3').val(),
+          $('#question4').val(),
+          $('#question5').val(),
+          $('#question6').val(),
+          $('#question7').val(),
+          $('#question8').val(),
+          $('#question9').val(),
+          $('#question10').val()
+        ]
+      }
+
+      console.log(userData);
+      // Grab URL of website
+      var currentURL = window.location.origin;
+      // AJAX post data to friends API
+      $.post(currentURL + '/api/friends', userData, function(data){
+        // Takes user input and displays best matches name and photo
+        $('#friendName').text(data.name);
+        $('#friendImage').attr('src', data.photo);
+        $('#matchDisplay').modal('toggle');
+      });
+    }
+    else{
+      alert('Please fill out all required fields before submitting.');
+    }
+    // Clears value after submit
+    // $('#question1').val('');
+    // $('#question2').val('');
+    // $('#question3').val('');
+    // $('#question4').val('');
+    // $('#question5').val('');
+    // $('#question6').val('');
+    // $('#question7').val('');
+    // $('#question8').val('');
+    // $('#question9').val('');
+    // $('#question10').val('');
+    
+    return false;
+  });
+</script>
+  

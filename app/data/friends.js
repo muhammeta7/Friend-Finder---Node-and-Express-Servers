@@ -1,4 +1,4 @@
-//array that holds all the 'friends' that have taken the survey
+//array that holds all the 'friends' that take the survey
 //initially started with 'dummy' data
 var friendList = [
   {
@@ -19,4 +19,14 @@ var friendList = [
   }
 ]
 
-module.exports = friendList;
+// function matchWithFriend() {
+
+//   for (var i=0; i < friendList.scores.length; i++){
+//     console.log(friendList);
+//   }
+
+// }
+
+// matchWithFriend();
+
+module.exports = friendList;  
